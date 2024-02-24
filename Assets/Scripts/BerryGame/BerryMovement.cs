@@ -16,4 +16,18 @@ public class BerryMovement : MonoBehaviour
         rb.velocity = new Vector2(0, -fallSpeed);
     }
 
+    void OnDestroy()
+    {
+        BerrySpawner berrySpawner = FindObjectOfType<BerrySpawner>();
+        berrySpawner.BerryFell();
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("BerryGround"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
 }

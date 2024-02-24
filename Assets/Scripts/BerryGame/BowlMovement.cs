@@ -20,10 +20,6 @@ public class BowlMovement : MonoBehaviour
     }
 
 
-    void Update()
-    {
-        Debug.Log("Berries: " + Inventory.Berries);
-    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Berry"))
@@ -31,5 +27,7 @@ public class BowlMovement : MonoBehaviour
             Destroy(other.gameObject);
             Inventory.Berries++;
         }
+
     }
+
 }
