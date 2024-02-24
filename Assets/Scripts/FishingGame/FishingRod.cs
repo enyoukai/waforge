@@ -9,10 +9,11 @@ public class FishingRod : MonoBehaviour
     int caughtFish = 0;
     [SerializeField] Hook hook;
     LineRenderer lineRenderer;
-    Vector2 startPos = new Vector2(0.35f, 3.78f);
-    float lineLength = 7.0f;
+    Vector2 startPos = new Vector2(0.35f, 5.74f);
+    Vector2 hookOffset = new Vector2(-0.225f, -0.43f);
+    float lineLength = 10.0f;
     float fishingTime = 0.2f;
-    float waitTime = 1.0f;
+    float waitTime = 0.5f;
     bool currentlyFishing = false;
 
     IEnumerator fishingCoroutine;
@@ -45,21 +46,31 @@ public class FishingRod : MonoBehaviour
 
             Vector3 currentEndPos = Vector3.Lerp(startPos, endPos, time / fishingTime);
 
-            hook.transform.position = currentEndPos;
+            hook.transform.position = currentEndPos + (Vector3)hookOffset;
 
             lineRenderer.SetPosition(1, currentEndPos);
 
             yield return null;
         }
 
+        yield return new WaitForSeconds(waitTime);
+
+        hook.transform.position = startPos;
+
         time = 0;
-        while (time < waitTime)
+        endPos = lineRenderer.GetPosition(1);
+
+        while (time < fishingTime)
         {
             time += Time.deltaTime;
+            lineRenderer.SetPosition(0, startPos);
+
+            Vector3 currentEndPos = Vector3.Lerp(endPos, startPos, time / fishingTime);
+
+            lineRenderer.SetPosition(1, currentEndPos);
+
             yield return null;
         }
-
-        lineRenderer.SetPosition(1, startPos);
 
         currentlyFishing = false;
 
@@ -72,14 +83,27 @@ public class FishingRod : MonoBehaviour
     {
         StopCoroutine(fishingCoroutine);
 
+        hook.transform.position = startPos;
+
         Inventory.Fish++;
         caughtFish++;
 
-        Time.timeScale = 0f;
+        yield return new WaitForSeconds(waitTime);
 
-        yield return new WaitForSecondsRealtime(2.0f);
+        float time = 0;
+        Vector3 endPos = lineRenderer.GetPosition(1);
 
-        Time.timeScale = 1f;
+        while (time < fishingTime)
+        {
+            time += Time.deltaTime;
+            lineRenderer.SetPosition(0, startPos);
+
+            Vector3 currentEndPos = Vector3.Lerp(endPos, startPos, time / fishingTime);
+
+            lineRenderer.SetPosition(1, currentEndPos);
+
+            yield return null;
+        }
 
         lineRenderer.SetPosition(1, startPos);
         currentlyFishing = false;
