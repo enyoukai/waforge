@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BerrySpawner : MonoBehaviour
 {
+    [SerializeField] List<Sprite> berrySprites;
     int berryCount = 10;
     public GameObject berryPrefab;
     float clock = 0f;
@@ -33,19 +35,25 @@ public class BerrySpawner : MonoBehaviour
     {
         float xSpawn = Random.Range(xLeftSpawn, xRightSpawn);
 
-        Instantiate(berryPrefab, new Vector2(xSpawn, ySpawn), Quaternion.identity);
-
-        berryCount--;
+        SpriteRenderer spriteRenderer = Instantiate(berryPrefab, new Vector2(xSpawn, ySpawn), Quaternion.identity).GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = berrySprites[Random.Range(0, berrySprites.Count)];
     }
 
     public void BerryFell()
     {
         berryCount--;
-        Debug.Log("berry fell");
+        if (berryCount <= 0)
+        {
+            EndMinigame();
+        }
+        else
+        {
+            Debug.Log("berry fell");
+        }
     }
 
     void EndMinigame()
     {
-        Debug.Log("end minigame");
+        SceneManager.LoadScene("BerryCollection");
     }
 }

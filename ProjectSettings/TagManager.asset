@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Berry
+  - BerryGround
+  - FishWall
+  - Fish
   layers:
   - Default
   - TransparentFX

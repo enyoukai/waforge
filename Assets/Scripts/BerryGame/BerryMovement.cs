@@ -21,6 +21,7 @@ public class BerryMovement : MonoBehaviour
         BerrySpawner berrySpawner = FindObjectOfType<BerrySpawner>();
         berrySpawner.BerryFell();
     }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("BerryGround"))

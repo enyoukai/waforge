@@ -5,12 +5,10 @@ using UnityEngine;
 public class BowlMovement : MonoBehaviour
 {
     Rigidbody2D rb;
-    PolygonCollider2D pc;
     float speed = 8f;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        pc = GetComponent<PolygonCollider2D>();
     }
 
     void FixedUpdate()
