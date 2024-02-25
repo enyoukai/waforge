@@ -88,7 +88,7 @@ public class FishingRod : MonoBehaviour
 
         hook.GetComponent<CircleCollider2D>().enabled = false;
 
-        Inventory.Fish++;
+        Inventory.AddFish();
         caughtFish++;
 
         yield return new WaitForSeconds(waitTime);

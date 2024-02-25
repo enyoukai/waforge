@@ -106,10 +106,10 @@ public class FarmManager : MonoBehaviour
         switch (crops[index].type)
         {
             case CropType.Wheat:
-                Inventory.Wheat++;
+                Inventory.AddWheat();
                 break;
             case CropType.Carrot:
-                Inventory.Carrots++;
+                Inventory.AddCarrot();
                 break;
         }
 
