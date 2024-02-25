@@ -398,6 +398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1304906490}
   - component: {fileID: 1304906489}
+  - component: {fileID: 1304906491}
   m_Layer: 0
   m_Name: Carrot
   m_TagString: Untagged
@@ -472,6 +473,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1304906491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304906488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2345fba096b44d449a5113ae177f1e81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carrotSprites:
+  - {fileID: 21300000, guid: 94de044e35649c7499c6aaaf6195d4de, type: 3}
+  - {fileID: 21300000, guid: cf8c28829bcdcbe43b27305fb48bdb88, type: 3}
+  - {fileID: 21300000, guid: 1f928b0a2dac61544b1c943ab2289e1b, type: 3}
 --- !u!1 &1378488070
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1378488072}
   - component: {fileID: 1378488071}
+  - component: {fileID: 1378488073}
   m_Layer: 0
   m_Name: Wheat
   m_TagString: Untagged
@@ -556,6 +574,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1378488073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378488070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18fc7eed39219c149ab89e80e527f433, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheatSprite:
+  - {fileID: 21300000, guid: ea1129b6f681a564f9883affa99764da, type: 3}
 --- !u!1 &1819516174
 GameObject:
   m_ObjectHideFlags: 0

@@ -79,6 +79,7 @@ public class FarmManager : MonoBehaviour
 
         if (growthClock >= growthClockCheck)
         {
+            growthClock = 0;
             for (int i = 0; i < crops.Length; i++)
             {
                 if (crops[i] != null)

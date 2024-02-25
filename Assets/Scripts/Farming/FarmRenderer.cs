@@ -24,7 +24,18 @@ public class FarmRenderer : MonoBehaviour
                         cropPrefab = carrotPrefab;
                         break;
                 }
+
                 GameObject crop = Instantiate(cropPrefab, new Vector3(crops[i].position.x, crops[i].position.y, 0), Quaternion.identity);
+
+                switch (crops[i].type)
+                {
+                    case CropType.Wheat:
+                        crop.GetComponent<Wheat>().SetCrop(crops[i]);
+                        break;
+                    case CropType.Carrot:
+                        crop.GetComponent<Carrot>().SetCrop(crops[i]);
+                        break;
+                }
             }
         }
 
