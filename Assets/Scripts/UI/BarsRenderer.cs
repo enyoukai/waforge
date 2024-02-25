@@ -11,4 +11,12 @@ public class BarsRenderer : MonoBehaviour
     [SerializeField] Slider vegetablesSlider;
     [SerializeField] Slider proteinSlider;
 
+    void Update()
+    {
+        grainsSlider.value = MonsterManager.Instance.grains;
+        fruitsSlider.value = MonsterManager.Instance.fruits;
+        vegetablesSlider.value = MonsterManager.Instance.vegetables;
+        proteinSlider.value = MonsterManager.Instance.protein;
+    }
+
 }

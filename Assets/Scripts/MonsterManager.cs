@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class MonsterManager : MonoBehaviour
 {
-    public static FarmManager Instance;
-    float xMin = -7.75f;
-    float xMax = 7.75f;
-    public float yMin = -4;
-    public float yMax = -1;
-    Crop[] crops = new Crop[9];
-    [SerializeField] float growthProbability = 0.5f;
-    [SerializeField] float growthClockCheck = 20.0f;
-    float growthClock = 0.0f;
+    public static MonsterManager Instance;
+
+    public float protein = 1;
+    public float grains = 1;
+    public float fruits = 1;
+    public float vegetables = 1;
+
+    [SerializeField] float decrementMin = 0.01f;
+    [SerializeField] float decrementMax = 0.05f;
+    [SerializeField] float decrementClock = 10f;
+    float time = 0f;
+
     void Awake()
     {
         if (Instance == null)
@@ -24,57 +27,36 @@ public class MonsterManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
-
-        for (int i = 0; i < crops.Length; i++)
-        {
-            // initialize cropType to random enum
-            CropType cropType = (CropType)Random.Range(0, 2);
-
-            crops[i] = new Crop(cropType, new Vector2(Random.Range(xMin, xMax), Random.Range(yMin, yMax)), i);
-        }
-    }
-
-    public Crop[] GetCrops()
-    {
-        return crops;
     }
 
     void Update()
     {
-        growthClock += Time.deltaTime;
+        time += Time.deltaTime;
 
-        if (growthClock >= growthClockCheck)
+        if (time >= decrementClock)
         {
-            growthClock = 0;
-            for (int i = 0; i < crops.Length; i++)
+            time = 0f;
+            protein -= Random.Range(decrementMin, decrementMax);
+            grains -= Random.Range(decrementMin, decrementMax);
+            fruits -= Random.Range(decrementMin, decrementMax);
+            vegetables -= Random.Range(decrementMin, decrementMax);
+
+            if (protein < 0)
             {
-                if (crops[i] != null)
-                {
-                    float roll = Random.Range(0.0f, 1.0f);
-                    if (roll <= growthProbability)
-                    {
-                        crops[i].Grow();
-                    }
-                }
+                protein = 0;
+            }
+            if (grains < 0)
+            {
+                grains = 0;
+            }
+            if (fruits < 0)
+            {
+                fruits = 0;
+            }
+            if (vegetables < 0)
+            {
+                vegetables = 0;
             }
         }
     }
-
-    public void HarvestCrop(int index)
-    {
-        // CHECK TYPE OF CROP, ADD TO INVENTORY
-        switch (crops[index].type)
-        {
-            case CropType.Wheat:
-                Inventory.AddWheat();
-                break;
-            case CropType.Carrot:
-                Inventory.AddCarrot();
-                break;
-        }
-
-        crops[index] = new Crop((CropType)Random.Range(0, 2), new Vector2(Random.Range(xMin, xMax), Random.Range(yMin, yMax)), index);
-    }
-
-
 }
