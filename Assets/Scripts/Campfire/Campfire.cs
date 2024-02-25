@@ -5,6 +5,9 @@ using UnityEngine;
 public class Campfire : MonoBehaviour
 {
     public static Campfire Instance;
+    float clock = 0;
+    [SerializeField] float cookTime = 5;
+    [SerializeField] float cookChance = 0.2f;
 
     void Awake()
     {
@@ -50,10 +53,33 @@ public class Campfire : MonoBehaviour
     public void RemoveCarrot()
     {
         carrotRenderer.enabled = false;
+        Inventory.AddCookedCarrot();
     }
 
     public void RemoveFish()
     {
         fishRenderer.enabled = false;
+        Inventory.AddCookedFish();
+    }
+
+    void Update()
+    {
+        clock += Time.deltaTime;
+
+        if (clock > cookTime)
+        {
+            clock = 0;
+
+            if (Random.value < cookChance)
+            {
+                CookCarrot();
+            }
+
+            if (Random.value < cookChance)
+            {
+                CookFish();
+            }
+        }
+
     }
 }

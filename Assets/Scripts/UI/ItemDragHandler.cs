@@ -50,18 +50,48 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IBeginDragHan
             {
                 FeedMonster();
             }
+            else if (scene.name == "Campfire")
+            {
+                Place();
+            }
+
         }
     }
 
     void FeedMonster()
     {
-        MonsterManager.Instance.AddProtein(0.2f);
-        MonsterManager.Instance.SpawnHearts();
+        if (item == InventoryItem.berry)
+        {
+            MonsterManager.Instance.AddFruits(0.2f);
+            MonsterManager.Instance.SpawnHearts();
+            return;
+        }
+
+        else if (item == InventoryItem.cookedCarrot)
+        {
+            MonsterManager.Instance.AddVegetables(0.2f);
+            MonsterManager.Instance.SpawnHearts();
+            return;
+        }
+
+        else if (item == InventoryItem.cookedFish)
+        {
+            MonsterManager.Instance.AddProtein(0.2f);
+            MonsterManager.Instance.SpawnHearts();
+            return;
+        }
     }
 
-    void CookFish()
+    void Place()
     {
-        Debug.Log("Cooking Fish");
+        if (item == InventoryItem.rawFish)
+        {
+            Campfire.Instance.PlaceFish();
+        }
+        else if (item == InventoryItem.carrot)
+        {
+            Campfire.Instance.PlaceCarrot();
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)

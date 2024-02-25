@@ -29,6 +29,16 @@ public static class Inventory
         AddItem(InventoryItem.rawFish);
     }
 
+    public static void AddCookedFish()
+    {
+        AddItem(InventoryItem.cookedFish);
+    }
+
+    public static void AddCookedCarrot()
+    {
+        AddItem(InventoryItem.cookedCarrot);
+    }
+
     public static void AddCarrot()
     {
         AddItem(InventoryItem.carrot);
