@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class BerrySpawner : MonoBehaviour
 {
     [SerializeField] List<Sprite> berrySprites;
-    int berryCount = 10;
     public GameObject berryPrefab;
     float clock = 0f;
     float spawnTime = 2f;
@@ -41,19 +40,5 @@ public class BerrySpawner : MonoBehaviour
 
     public void BerryFell()
     {
-        berryCount--;
-        if (berryCount <= 0)
-        {
-            EndMinigame();
-        }
-        else
-        {
-            Debug.Log("berry fell");
-        }
-    }
-
-    void EndMinigame()
-    {
-        SceneManager.LoadScene("BerryCollection");
     }
 }
