@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BarsUI.unity
     guid: 0a23be38c141ab64eb30a6146eae3b5f
+  - enabled: 1
+    path: Assets/Scenes/Campfire.unity
+    guid: 21972f39b199dbe4fbfcabf0d5cc5317
+  - enabled: 1
+    path: Assets/Scenes/Farm.unity
+    guid: 7a4d4f8c2fc10c7488c06eef1adafbe7
+  - enabled: 1
+    path: Assets/Scenes/FishingMinigame.unity
+    guid: f5ac8d1152a7ca748b133d583868ae87
   m_configObjects: {}
