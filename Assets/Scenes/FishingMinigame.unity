@@ -767,6 +767,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 131039282, guid: 8196e65cb35ebe943abbc121c6b8b678, type: 3}
+    - target: {fileID: 3000183362215017176, guid: 7606d7362892acc49afe9b8ea31a7c68, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000183362215017176, guid: 7606d7362892acc49afe9b8ea31a7c68, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.67
+      objectReference: {fileID: 0}
     - target: {fileID: 7806608732743156725, guid: 7606d7362892acc49afe9b8ea31a7c68, type: 3}
       propertyPath: m_Name
       value: Fish (3)
@@ -930,6 +938,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 397772541, guid: 8196e65cb35ebe943abbc121c6b8b678, type: 3}
+    - target: {fileID: 3000183362215017176, guid: 7606d7362892acc49afe9b8ea31a7c68, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000183362215017176, guid: 7606d7362892acc49afe9b8ea31a7c68, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.825
+      objectReference: {fileID: 0}
     - target: {fileID: 7806608732743156725, guid: 7606d7362892acc49afe9b8ea31a7c68, type: 3}
       propertyPath: m_Name
       value: Fish (2)
@@ -991,6 +1007,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 131039282, guid: 8196e65cb35ebe943abbc121c6b8b678, type: 3}
+    - target: {fileID: 3000183362215017176, guid: 7606d7362892acc49afe9b8ea31a7c68, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000183362215017176, guid: 7606d7362892acc49afe9b8ea31a7c68, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.67
+      objectReference: {fileID: 0}
     - target: {fileID: 7806608732743156725, guid: 7606d7362892acc49afe9b8ea31a7c68, type: 3}
       propertyPath: m_Name
       value: Fish (1)
@@ -1348,6 +1372,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 397772541, guid: 8196e65cb35ebe943abbc121c6b8b678, type: 3}
+    - target: {fileID: 3000183362215017176, guid: 7606d7362892acc49afe9b8ea31a7c68, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000183362215017176, guid: 7606d7362892acc49afe9b8ea31a7c68, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.825
+      objectReference: {fileID: 0}
     - target: {fileID: 7806608732743156725, guid: 7606d7362892acc49afe9b8ea31a7c68, type: 3}
       propertyPath: m_Name
       value: Fish

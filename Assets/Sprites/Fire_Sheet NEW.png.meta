@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cca43d8d7ba404a409952306c2179602
+guid: 709c50da1d8a17e40a8e73dbe29ed9ac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,7 +121,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Fire_Sheet NEW_0
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 1029
+        width: 489
+        height: 504
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa27be3f6b2687547ba00b2ea115bad9
+      internalID: 1578561677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Sheet NEW_5
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 1022
+        width: 491
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded3a3b6824653c419e1b24bccddc47b
+      internalID: 1979879872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Sheet NEW_11
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 226
+        width: 501
+        height: 559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524618957196e994f8a1d04f2f437b1b
+      internalID: -324416561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire_Sheet NEW_12
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 219
+        width: 483
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7abdbee6844c064dba3e6ed5386a2fa
+      internalID: -673777524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +216,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fire_Sheet NEW_0: 1578561677
+      Fire_Sheet NEW_1: 1550097958
+      Fire_Sheet NEW_10: -111852137
+      Fire_Sheet NEW_11: -324416561
+      Fire_Sheet NEW_12: -673777524
+      Fire_Sheet NEW_13: 1160047525
+      Fire_Sheet NEW_2: 95857323
+      Fire_Sheet NEW_3: -1518036535
+      Fire_Sheet NEW_4: 1114049720
+      Fire_Sheet NEW_5: 1979879872
+      Fire_Sheet NEW_6: 1702765590
+      Fire_Sheet NEW_7: -593444088
+      Fire_Sheet NEW_8: 2016164074
+      Fire_Sheet NEW_9: -1096527500
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
