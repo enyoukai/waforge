@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5182536097129337951}
   - component: {fileID: 8863691184357440081}
   - component: {fileID: 4440941668984595820}
+  - component: {fileID: 8426736468088865135}
   m_Layer: 0
   m_Name: Carrot
   m_TagString: Untagged
@@ -97,7 +98,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2345fba096b44d449a5113ae177f1e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seedSprite: {fileID: 21300000, guid: 20fc32ac897a2d84584bc385b6b6f341, type: 3}
+  sprouteSprite: {fileID: 21300000, guid: b6863a9f11e74d141b8e182d1e62c858, type: 3}
   carrotSprites:
   - {fileID: 21300000, guid: 94de044e35649c7499c6aaaf6195d4de, type: 3}
   - {fileID: 21300000, guid: cf8c28829bcdcbe43b27305fb48bdb88, type: 3}
   - {fileID: 21300000, guid: 1f928b0a2dac61544b1c943ab2289e1b, type: 3}
+--- !u!61 &8426736468088865135
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744796884373302342}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.09988427, y: 0.1281771}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5244085, y: 0.11898235}
+    oldSize: {x: 1.69, y: 2.26}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.1916127, y: 0.50098526}
+  m_EdgeRadius: 0

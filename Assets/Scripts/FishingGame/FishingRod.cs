@@ -55,10 +55,10 @@ public class FishingRod : MonoBehaviour
 
         yield return new WaitForSeconds(waitTime);
 
-        hook.transform.position = startPos;
-
         time = 0;
         endPos = lineRenderer.GetPosition(1);
+
+        hook.GetComponent<CircleCollider2D>().enabled = false;
 
         while (time < fishingTime)
         {
@@ -68,9 +68,12 @@ public class FishingRod : MonoBehaviour
             Vector3 currentEndPos = Vector3.Lerp(endPos, startPos, time / fishingTime);
 
             lineRenderer.SetPosition(1, currentEndPos);
+            hook.transform.position = currentEndPos + (Vector3)hookOffset;
 
             yield return null;
         }
+
+        hook.GetComponent<CircleCollider2D>().enabled = true;
 
         currentlyFishing = false;
 
@@ -83,7 +86,7 @@ public class FishingRod : MonoBehaviour
     {
         StopCoroutine(fishingCoroutine);
 
-        hook.transform.position = startPos;
+        hook.GetComponent<CircleCollider2D>().enabled = false;
 
         Inventory.Fish++;
         caughtFish++;
@@ -102,9 +105,12 @@ public class FishingRod : MonoBehaviour
 
             lineRenderer.SetPosition(1, currentEndPos);
 
+            hook.transform.position = currentEndPos + (Vector3)hookOffset;
+
             yield return null;
         }
 
+        hook.GetComponent<CircleCollider2D>().enabled = true;
         lineRenderer.SetPosition(1, startPos);
         currentlyFishing = false;
 
