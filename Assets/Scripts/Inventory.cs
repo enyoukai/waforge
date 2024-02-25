@@ -38,4 +38,9 @@ public static class Inventory
     {
         AddItem(InventoryItem.wheat);
     }
+
+    public static void AddBerries()
+    {
+        AddItem(InventoryItem.berry);
+    }
 }

@@ -23,7 +23,7 @@ public class BowlMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Berry"))
         {
             Destroy(other.gameObject);
-            Inventory.Berries++;
+            Inventory.AddBerries();
         }
 
     }
