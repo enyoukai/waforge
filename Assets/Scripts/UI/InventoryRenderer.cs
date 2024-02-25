@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class InventoryRenderer : MonoBehaviour
 {
+    [SerializeField] public Image draggableImage;
     [SerializeField] Sprite carrotIcon;
     [SerializeField] Sprite wheatIcon;
     [SerializeField] Sprite cookedCarrotIcon;
@@ -16,6 +17,26 @@ public class InventoryRenderer : MonoBehaviour
     [SerializeField] Sprite berryIcon;
 
     [SerializeField] Image[] inventorySlots;
+
+    public static InventoryRenderer Instance;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            inventorySlots[i].GetComponent<ItemDragHandler>().SetIndex(i);
+            inventorySlots[i].GetComponent<ItemDragHandler>().SetItem(Inventory.items[i]);
+        }
+    }
 
     void Start()
     {

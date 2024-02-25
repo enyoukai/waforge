@@ -495,6 +495,9 @@ MonoBehaviour:
   grains: 1
   fruits: 1
   vegetables: 1
+  decrementMin: 0.01
+  decrementMax: 0.05
+  decrementClock: 10
 --- !u!4 &1179307456
 Transform:
   m_ObjectHideFlags: 0
@@ -567,6 +570,79 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eefb16cef76d0f942a654e085edd2d4f, type: 3}
+--- !u!1001 &1817519379
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1026596887964903023, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: m_Name
+      value: HeartParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485893766442770836, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485893766442770836, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485893766442770836, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485893766442770836, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092140432313262370, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092140432313262370, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092140432313262370, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092140432313262370, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092140432313262370, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092140432313262370, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092140432313262370, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092140432313262370, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092140432313262370, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092140432313262370, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 00191bd00853e534e81dfa44068db00b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -577,3 +653,4 @@ SceneRoots:
   - {fileID: 1200610418}
   - {fileID: 239361549}
   - {fileID: 24861339}
+  - {fileID: 1817519379}

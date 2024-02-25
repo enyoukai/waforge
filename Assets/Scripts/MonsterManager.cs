@@ -59,4 +59,46 @@ public class MonsterManager : MonoBehaviour
             }
         }
     }
+
+    public void AddProtein(float amt)
+    {
+        protein += amt;
+        if (protein > 1)
+        {
+            protein = 1;
+        }
+    }
+
+
+    public void AddGrains(float amt)
+    {
+        grains += amt;
+        if (grains > 1)
+        {
+            grains = 1;
+        }
+    }
+
+    public void AddFruits(float amt)
+    {
+        fruits += amt;
+        if (fruits > 1)
+        {
+            fruits = 1;
+        }
+    }
+
+    public void AddVegetables(float amt)
+    {
+        vegetables += amt;
+        if (vegetables > 1)
+        {
+            vegetables = 1;
+        }
+    }
+
+    public void SpawnHearts()
+    {
+        GameObject.Find("HeartParticles").GetComponent<ParticleSystem>().Play();
+    }
 }
