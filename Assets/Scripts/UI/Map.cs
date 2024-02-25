@@ -11,11 +11,23 @@ public class Map : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void RenderMap()
     {
         map.SetActive(true);
+
+        GameObject bars = GameObject.Find("BarsParent");
+        if (bars != null)
+        {
+            bars.SetActive(false);
+        }
     }
 
     public void CloseMap()
     {
         map.SetActive(false);
+
+        GameObject bars = GameObject.Find("BarsParent");
+        if (bars != null)
+        {
+            bars.SetActive(true);
+        }
     }
 
     void Update()

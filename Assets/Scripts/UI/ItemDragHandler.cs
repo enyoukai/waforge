@@ -80,6 +80,13 @@ public class ItemDragHandler : MonoBehaviour, IPointerDownHandler, IBeginDragHan
             MonsterManager.Instance.SpawnHearts();
             return;
         }
+
+        else if (item == InventoryItem.wheat)
+        {
+            MonsterManager.Instance.AddGrains(0.2f);
+            MonsterManager.Instance.SpawnHearts();
+            return;
+        }
     }
 
     void Place()
