@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class FarmRenderer : MonoBehaviour
 {
+    public static FarmRenderer Instance;
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        DontDestroyOnLoad(gameObject);
+    }
     [SerializeField] GameObject wheatPrefab;
     [SerializeField] GameObject carrotPrefab;
     void Start()
